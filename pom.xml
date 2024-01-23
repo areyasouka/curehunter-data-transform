@@ -4,8 +4,8 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.example</groupId>
-	<artifactId>picocli-project-template</artifactId>
+	<groupId>com.curehunter</groupId>
+	<artifactId>curehunter-transform-project</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
 	<properties>
@@ -106,7 +106,7 @@
 							<goal>java</goal>
 						</goals>
 						<configuration>
-							<mainClass>org.example.Main</mainClass>
+							<mainClass>com.curehunter.Main</mainClass>
 						</configuration>
 					</execution>
 					<!-- generates bash/zsh autocompletion script -->
@@ -126,7 +126,7 @@
 								<argument>--force</argument>
 								<argument>--completionScript</argument>
 								<argument>${project.build.directory}/app_completion.sh</argument>
-								<argument>org.example.Main</argument>
+								<argument>com.curehunter.Main</argument>
 							</arguments>
 						</configuration>
 					</execution>
@@ -176,7 +176,7 @@
 							<archive>
 								<manifest>
 									<addClasspath>true</addClasspath>
-									<mainClass>org.example.Main</mainClass>
+									<mainClass>com.curehunter.Main</mainClass>
 								</manifest>
 							</archive>
 							<descriptorRefs>
@@ -209,7 +209,7 @@
 						<version>${native-maven-plugin.version}</version>
 						<extensions>true</extensions>
 						<configuration>
-							<mainClass>org.example.Main</mainClass>
+							<mainClass>com.curehunter.Main</mainClass>
 							<!-- executable file name -->
 							<imageName>app</imageName>
 							<!-- enable reachability metadata https://graalvm.github.io/native-build-tools/latest/maven-plugin.html#metadata-support -->

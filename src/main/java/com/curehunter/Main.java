@@ -1,10 +1,12 @@
-package org.example;
+package com.curehunter;
 
-import org.example.picocli.PropertiesFileVersionProvider;
+import com.curehunter.picocli.PropertiesFileVersionProvider;
+import com.curehunter.transform.TransformAll;
+
 import picocli.CommandLine;
 
 @CommandLine.Command(name = "app", mixinStandardHelpOptions = true, versionProvider = PropertiesFileVersionProvider.class, subcommands = {
-        HelloCommand.class, ListFilesCommand.class })
+        ListFilesCommand.class, TransformAll.class })
 public class Main {
 
     public static void main(String[] args) {

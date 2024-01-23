@@ -1,4 +1,4 @@
-package org.example.picocli;
+package com.curehunter.picocli;
 
 import java.io.InputStream;
 import java.net.URL;

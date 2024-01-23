@@ -1,4 +1,4 @@
-package org.example;
+package com.curehunter;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -17,7 +17,7 @@ public class ListFilesCommand implements Callable<Integer> {
     private Path path;
 
     @Override public Integer call() {
-        WildcardFileFilter filter = new WildcardFileFilter("*.java");
+        WildcardFileFilter filter = new WildcardFileFilter("*");
 
         try (Stream<Path> stream = Files.walk(path)) {
             stream.filter(path -> filter.accept(path.toFile()))

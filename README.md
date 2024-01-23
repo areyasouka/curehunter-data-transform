@@ -1,23 +1,18 @@
-# Java CLI project template
+# CureHunter Data Transformer Example Java CLI 
 
-Probably the fastest way to bootstrap a **Java** Command Line Application (**CLI**) project!
+Example of CLI XSL transformer for licensed [CureHunter](https://curehunter.com) data.
+Multithreaded conversion of CureHunter sentence relationship and MeSH keyword tagged NLM PubMed Data ".xml.gz" files to TSV etc.
 
-Click the big green *Use This Template* button and start building your own CLI.
+"medlineCitationTSV.xsl" extracts all medline citation abstracts from the sample "./data/pubmed-sample*.xml.gz" pubmed xml files which contain Drug-Disease relationships.
 
-## 🤩 Highlights
+## Usage
 
-- uses [Picocli](https://picocli.info/) for simple and elegant commands implementation
-- builds to an **executable jar** and **GraalVM Native Image**
-- preconfigured `help` and `version` commands
-- generates Bash/ZSH autocompletion scripts
-- uses **Maven** as a build tool
-- **no frameworks** like Spring, Micronaut or Quarkus
+Run application through Maven
 
-## 🛠 Requirements
-
-- GraalVM distribution of Java (easy to install with https://sdkman.io/)
-
-## 🤔 How to use
+```
+$ mkdir output
+$ ./mvnw -Dexec.args=transform
+```
 
 Run tests & build an executable JAR:
 
@@ -31,10 +26,4 @@ Run tests as native image & build a native executable:
 $ ./mvnw package -Pnative
 ```
 
-Run application through Maven
-
-```
-$ ./mvnw -Dexec.args=--help
-```
-
-Sounds good? Consider [❤️ Sponsoring](https://github.com/sponsors/maciejwalkowiak) the project! Thank you!
+Original Template [java-cli-project-template](https://github.com/maciejwalkowiak/java-cli-project-template)! Thank you!

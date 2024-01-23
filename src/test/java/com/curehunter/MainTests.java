@@ -1,10 +1,11 @@
-package org.example;
+package com.curehunter;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import picocli.CommandLine;
 
 import static org.assertj.core.api.Assertions.assertThat;
